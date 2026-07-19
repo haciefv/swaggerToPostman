@@ -1,0 +1,33 @@
+{
+  "name": "swagger-to-postman-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Chrome extension that generates a Postman Collection from Swagger and OpenAPI specifications in one click.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "create-hash": "^1.2.0",
+    "events": "^3.3.0",
+    "js-yaml": "^4.1.0",
+    "openapi-to-postmanv2": "^4.21.0",
+    "process": "^0.11.10",
+    "readable-stream": "^3.6.2"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.270",
+    "@types/create-hash": "^1.2.6",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.14.0",
+    "happy-dom": "^15.7.4",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "vitest": "^2.0.5"
+  }
+}

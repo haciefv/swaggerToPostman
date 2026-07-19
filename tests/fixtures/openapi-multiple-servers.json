@@ -1,0 +1,16 @@
+{
+  "openapi": "3.0.1",
+  "info": { "title": "Multi Server API", "version": "1.0.0" },
+  "servers": [
+    { "url": "https://prod.example.com" },
+    { "url": "https://staging.example.com" }
+  ],
+  "paths": {
+    "/ping": {
+      "get": {
+        "operationId": "ping",
+        "responses": { "200": { "description": "OK" } }
+      }
+    }
+  }
+}

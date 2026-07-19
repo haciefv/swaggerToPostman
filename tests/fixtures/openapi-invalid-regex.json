@@ -1,0 +1,33 @@
+{
+  "openapi": "3.0.0",
+  "info": { "title": "Fraud API", "version": "1.0.0" },
+  "servers": [{ "url": "https://api.example.com" }],
+  "paths": {
+    "/users/invite": {
+      "post": {
+        "operationId": "inviteUser",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/InviteUserRequest" }
+            }
+          }
+        },
+        "responses": { "200": { "description": "OK" } }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "InviteUserRequest": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "pattern": "(?i)operator|admin"
+          }
+        }
+      }
+    }
+  }
+}

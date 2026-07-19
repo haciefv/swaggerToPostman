@@ -307,6 +307,12 @@ it in `index.ts` — no changes to `popup.ts` itself.
 4. Describe the change and, for behavioral changes, how you verified it (unit tests,
    manual testing steps, or both).
 
+## Privacy
+
+This extension processes Swagger/OpenAPI specification content locally in the browser
+and does not transmit it to the developer or any external server. See
+[`./PRIVACY.md`](./PRIVACY.md) for the full privacy policy.
+
 ## License
 
 No license file is currently included; treat this repository as All Rights Reserved

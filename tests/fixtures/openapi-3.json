@@ -1,0 +1,30 @@
+{
+  "openapi": "3.0.3",
+  "info": { "title": "Zehyn Public API", "version": "2.1.0" },
+  "servers": [{ "url": "https://api.zehyn.example.com/v2" }],
+  "tags": [{ "name": "Exams" }],
+  "paths": {
+    "/exams": {
+      "get": {
+        "tags": ["Exams"],
+        "summary": "List exams",
+        "operationId": "listExams",
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/exams/{examId}": {
+      "get": {
+        "tags": ["Exams"],
+        "operationId": "getExam",
+        "deprecated": true,
+        "parameters": [
+          { "name": "examId", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "OK" } }
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
